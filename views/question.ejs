@@ -1,31 +1,31 @@
 <div id="content" class="container-fluid">
   <h1>Pregunta <%= question.id %></h1>
-  <p>
+  <pre>
     <%= question.solution.split(',').length%> Respuestas válidas.
-  </p>
-  <p style="weight: bold;">
+  </pre>
+  <pre style="weight: bold;">
     <%= question.statement %>
-  </p>
+  </pre>
 
-  <p>
+  <pre>
     <strong>A:</strong><br />
-    <%= question.answer_1 %>
-  </p>
+    <%= question.answer_0 %>
+  </pre>
 
-  <p>
+  <pre>
     <strong>B:</strong><br />
     <%= question.answer_1 %>
-  </p>
+  </pre>
 
-  <p>
+  <pre>
     <strong>C:</strong><br />
-    <%= question.answer_1 %>
-  </p>
+    <%= question.answer_2 %>
+  </pre>
 
-  <p>
+  <pre>
     <strong>D:</strong><br />
-    <%= question.answer_1 %>
-  </p>
+    <%= question.answer_3 %>
+  </pr>
 
   <br />
   <br />
