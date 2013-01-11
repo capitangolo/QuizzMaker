@@ -86,3 +86,5 @@ exports.newClient = function() {
 exports.redisClient = client
 exports.express = express
 exports.app = app
+
+exports.questions = require("./lib/questions")(this);

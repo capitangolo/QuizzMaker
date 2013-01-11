@@ -5,7 +5,7 @@
   , "dependencies": {
       "express": "2.5.0",
       "ejs": ">= 0.0.1",
-      "redis": "0.8.2",
+      "redis": "0.7.2",
       "hiredis": "0.1.14",
       "connect-redis": ">= 1.0.0"
   }
