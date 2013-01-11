@@ -1,0 +1,59 @@
+<!doctype html>
+<!--[if lt IE 7]> <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js lt-ie9 lt-ie8" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js lt-ie9" lang="en"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+<head>
+  <title>Quizz Maker</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width">
+
+  <link rel="stylesheet" href="/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/css/bootstrap-responsive.min.css">
+  <link rel="stylesheet" href="/css/datepicker.css">
+
+  <script src="/javascript/jquery-1.7.1.min.js"></script>
+  <script src="/javascript/plugins.js"></script>
+  <script src="/javascript/bootstrap.min.js"></script>
+  <script src="/javascript/bootstrap-datepicker.js"></script>
+</head>
+
+<body data-spy="scroll" data-target=".subnav" data-offset="50">
+  <% if (typeof(hide_menu) == "undefined"){ %>
+  <div class="navbar">
+    <div class="navbar-inner">
+      <div class="container" style="width: auto;">
+        <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </a>
+        <a class="brand" href="/">QuizzMaker</a>
+        <div class="nav-collapse">
+          <ul id="mainmenu" class="nav">
+            <li id="menu_home"><a href="/admin/">Información General</a></li>
+            <li><a href="/logout">Salir</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <% } %>
+
+  <div class="span6" style="position:absolute; right:30%">
+  <% if (typeof(flash) != "undefined" && flash != null){ %>
+    <% flash.forEach(function(msg){%>
+      <div class="alert fade in alert-error">
+        <button class="close" data-dismiss="alert">×</button>
+        <%= msg %>
+      </div>
+  <% });} %>
+  </div>
+
+  <div role="main">
+    <%- body %>
+  </div>
+</body>
+</html>
